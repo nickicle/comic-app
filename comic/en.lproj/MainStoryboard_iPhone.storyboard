@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="XzW-RJ-S75">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--Comic Table View Controller - MY COMICS-->
+        <scene sceneID="hiD-41-dbA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgm-Tm-cWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="R9S-kL-SVf" customClass="ComicTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="g97-NZ-zXF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComicCellIdentifier" textLabel="DVb-Ox-r38" rowHeight="56" style="IBUITableViewCellStyleDefault" id="R1P-WU-wZn">
+                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DVb-Ox-r38">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <connections>
+                                    <segue destination="ehL-7A-jVd" kind="push" id="ZEj-Nf-Hg5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R9S-kL-SVf" id="XJm-W7-vfn"/>
+                            <outlet property="delegate" destination="R9S-kL-SVf" id="OQk-xV-T2n"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="table" id="Ga2-WO-DHQ"/>
+                    <navigationItem key="navigationItem" title="MY COMICS" id="vnG-ea-56x">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ODX-Ng-yze">
+                            <connections>
+                                <segue destination="8HR-At-QXG" kind="push" id="KKL-Yi-oXD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="520" y="185"/>
+        </scene>
+        <!--Comic Detail View Controller-->
+        <scene sceneID="DA4-Hv-WRr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f04-Bk-lET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ehL-7A-jVd" customClass="ComicDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tps-rE-jvm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Qec-Zs-K9J">
+                                <rect key="frame" x="0.0" y="-3" width="320" height="422"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LSv-c5-cOu"/>
+                    <connections>
+                        <outlet property="comicView" destination="Qec-Zs-K9J" id="Q9o-Xd-42L"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1116" y="422"/>
+        </scene>
+        <!--View Controller - CREATE -->
+        <scene sceneID="3JS-lb-rQd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xA-5K-4iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="8HR-At-QXG" customClass="NJCViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="COB-Cj-GpN" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type comic here" textAlignment="center" minimumFontSize="17" id="fYs-hP-1Qm">
+                                <rect key="frame" x="101" y="16" width="119" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="keyBoardHide:" destination="8HR-At-QXG" eventType="editingDidEndOnExit" id="w3c-V7-gDV"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZgT-4v-Zzn">
+                                <rect key="frame" x="5" y="16" width="88" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="take image">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getTakePicture:" destination="2xA-5K-4iy" eventType="touchUpInside" id="TKV-Qv-bUX"/>
+                                    <action selector="getcameraPicture:" destination="8HR-At-QXG" eventType="touchUpInside" id="LcY-Yp-Jk9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Hqk-eA-rtw">
+                                <rect key="frame" x="0.0" y="52" width="320" height="458"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cfO-iK-MiC">
+                                <rect key="frame" x="228" y="15" width="85" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="photos">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectExistingPicture" destination="8HR-At-QXG" eventType="touchUpInside" id="Ctf-pW-OFd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backroundTapped:" destination="8HR-At-QXG" eventType="touchDown" id="azD-WY-QY8"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="CREATE " id="t6t-AG-XBg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gns-yN-WhQ">
+                            <connections>
+                                <action selector="save" destination="8HR-At-QXG" id="5ps-1b-udZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Hqk-eA-rtw" id="FuN-Xm-3An"/>
+                        <outlet property="takePicture" destination="ZgT-4v-Zzn" id="QW7-wZ-tYp"/>
+                        <outlet property="textfield" destination="fYs-hP-1Qm" id="Bqs-6i-RcX"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1108" y="-327"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="6lV-xN-5GD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDz-nF-jdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="XzW-RJ-S75" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qk0-fQ-kAV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ruj-I1-IWW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R9S-kL-SVf" kind="relationship" relationship="rootViewController" id="xyx-K2-ePC"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-60" y="179"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ComicDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="comicView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ComicTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComicTableViewController.h"/>
+        </class>
+        <class className="NJCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NJCViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="getcameraPicture:"/>
+                <relationship kind="action" name="save"/>
+                <relationship kind="action" name="selectExistingPicture"/>
+                <relationship kind="outlet" name="comicname" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="takePicture" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textfield" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
